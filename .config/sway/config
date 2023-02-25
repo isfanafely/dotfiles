@@ -4,6 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 font pango:JetBrainsMono Nerd Font 10.5
+
 focus_follows_mouse always
 ### Variables
 #
@@ -32,7 +33,6 @@ client.focused_inactive #333333 #1d1d1d #ffffff #eaeaea   #333333
 client.unfocused        #333333 #333333 #ffffff #eaeaea   #333333
 client.urgent           #ffffff #e01b24 #1d202f #eaeaea   #ffffff
 
-include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
@@ -229,7 +229,7 @@ bindsym Ctrl+Alt+p    exec grimshot save area
 
 bar {
     position top
-    status_command while /home/isfana/.config/sway/swaybar.sh ; do sleep 1; done
+    status_command while $HOME/.config/sway/swaybar.sh ; do sleep 1; done
     colors {
        statusline #ffffff
        background #333333
