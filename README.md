@@ -1,4 +1,4 @@
-<table align="right">
+<table align="center">
   <tr>
     <td align="center">
       <sup>
