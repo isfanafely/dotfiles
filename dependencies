@@ -1,0 +1,6 @@
+dependencies:
+librust-cairo-sys-rs+glib-sys-dev
+librust-atk-dev
+librust-pango-sys-dev
+libgdk-pixbuf2.0-dev
+librust-gdk-sys-dev
