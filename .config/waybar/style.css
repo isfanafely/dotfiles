@@ -1,0 +1,135 @@
+/* GENERAL */
+* {
+    min-height: 0;
+    font-size: 15px;
+    font-weight: bold;
+  }
+window#waybar {
+    background-color: #333333;
+    font-family: JetBrainsMono Nerd Font;
+    padding: 0;
+    margin: 0;
+}
+
+#workspaces {
+  margin: 0px;
+  margin-top: 0px;
+  padding: 0px;
+  padding-left: 0px;
+  background-color: #333333;
+}
+
+#workspaces button {
+  color: #ffffff;
+  padding: 0px 5px;
+}
+
+#workspaces button:hover {
+  background: #5eff00;
+}
+
+#workspaces button.focused {
+  color: #ffffff;
+  background-color: #007fff;
+  border-radius: 0%;
+}
+
+#custom-power {
+  color: #000000;
+  background-color: #ff5c5c;
+  padding: 0 10px;
+  margin: 0 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+#clock {
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+
+#custom-void {
+    color: #000000;
+    background-color: #ffffff;
+    padding: 0 10px;
+    margin: 0 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#custom-separator {
+  color: #333333;
+  padding: 0 0px;
+  margin: 0 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+#memory {
+    color: #ffffff;
+}
+
+#cpu {
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+#custom-crypto {
+  border-radius: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 0px;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+@keyframes blink{
+  to{
+    color: #ff0000;
+  }
+  8%{
+    color: #ff7f00;
+  }
+  16%{
+    color: #ffff00;
+  }
+  25%{
+    color: #7fff00;
+  }
+  33%{
+    color: #00ff00;
+  }
+  41%{
+    color: #00ff7f;
+  }
+  50%{
+    color: #00ffff;
+  }
+  58%{
+    color: #007fff;
+  }
+  66%{
+    color: #0000ff;
+  }
+  75%{
+    color: #7f00ff;
+  }
+  83%{
+    color: #ff00ff;
+  }
+  91%{
+    color: #ff007f;
+  }
+}
+
+#custom-music {
+  animation-name: blink;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

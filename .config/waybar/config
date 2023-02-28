@@ -1,0 +1,89 @@
+{
+  "position": "top",
+	"height": 10,
+  "modules-left": ["custom/void","sway/workspaces","custom/separator","custom/music"],
+	"modules-center": ["custom/clock","custom/weather"],
+  "modules-right": ["network","custom/separator","memory", "custom/separator","cpu","temperature","custom/separator","custom/crypto","custom/separator","custom/power"],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+	  "format": "{name}",
+	  "persistent_workspaces": {
+	   "1": [],
+	   "2": [],
+	   "3": [],
+	   "4": [],
+	   "5": [],
+	   "6": [],
+	   "7": [],
+	   "8": [],
+	   "9": [],
+	   "10": []
+	  }
+  },
+  "custom/power": {
+    "format": "󰐥",
+    "on-click": "wlogout -p layer-shell"
+    },
+  "custom/clock": {
+    "exec": "echo '  '$(date +'%a %b %d %I:%M:%S %p')'  '",
+    "interval": 1
+  },
+  "cpu": {
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+    "format": "CPU: {usage}% ",
+    "format-alt": "{avg_frequency}GHz"
+  },
+  "custom/void": {
+	  "format": "\udb82\udcda",
+	  "on-click": "wofi -I --show drun"
+  },
+  "custom/separator": {
+	  "format": " "
+  },
+  "memory": {
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+    "format": " RAM: {}%",
+    "tooltip-format": "{used:0.1f}G/{total:0.1f}G used"
+  },
+	"temperature": {
+    "thermal-zone": 1,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format-critical": "{temperatureC}°C",
+    "format": "{temperatureC}°C"
+  },
+  "network": {
+    "interval": 1,
+    "interface": "enp5s0",
+    "format-wifi": "⬇ {bandwidthDownBits} ⬆ {bandwidthUpBits}",
+    "format-ethernet": "<span foreground='#00FF00'>⬇</span> {bandwidthDownBits}  <span foreground='#FF0000'>⬆</span> {bandwidthUpBits}",
+    "format-disconnected": " <span foreground='#928374'>\uead0</span> ",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr} "
+  },
+  "custom/crypto": {
+    "format": "<span foreground='#FFA500'>₿</span> {}",
+    "interval": 300,
+    "exec": "$HOME/.config/waybar/modules/crypto.sh",
+    "exec-if": "ping www.coindesk.com -c1"
+  },
+  "custom/music": {
+    "format": "♪ {}",
+    "interval": 1,
+    "exec": "$HOME/.config/waybar/modules/music.sh",
+    "exec-if": "pgrep cmus",
+    "on-click": "cmus-remote -u"                                   
+  },
+  "custom/weather": {
+    "format": "{}",
+    "interval": 60,
+    "exec": "$HOME/.config/waybar/modules/weather.sh",
+    "exec-if": "ping openweathermap.org -c1"                            
+  }
+}

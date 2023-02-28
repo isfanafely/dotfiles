@@ -1,11 +1,12 @@
 # Default config for sway
-#
+
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
 font pango:JetBrainsMono Nerd Font 10.5
 
-focus_follows_mouse always
+focus_follows_mouse yes
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -22,7 +23,8 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu wofi -I --show drun
-#set $menu dmenu_path | dmenu |
+#set $menu dmenu_path | dmenu_run
+
 #autotiling
 exec autotiling
 
@@ -80,7 +82,7 @@ output * bg /usr/share/wallpapers/nebula.png fill
     bindsym $mod+Return exec $term
 
     #logout
-    bindsym Ctrl+Alt+q exec wlogout
+    bindsym Ctrl+Alt+q exec wlogout -p layer-shell
     
     # Kill focused window
     bindsym $mod+q kill
@@ -223,19 +225,25 @@ bindsym Ctrl+Alt+u	exec $HOME/.config/cmus/update.sh
 
 #Screenshoot
 bindsym Ctrl+Alt+p    exec grimshot save area
+
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 
+# bar {
+#     position top
+#     status_command while /home/isfana/.config/sway/swaybar.sh ; do sleep 1; done
+#     colors {
+#        statusline #ffffff
+#        background #333333
+#        inactive_workspace #32323200 #32323200 #5c5c5c
+#        height 17.5
+#     }
+# }
 bar {
     position top
-    status_command while $HOME/.config/sway/swaybar.sh ; do sleep 1; done
-    colors {
-       statusline #ffffff
-       background #333333
-       inactive_workspace #32323200 #32323200 #5c5c5c
-       height 17.5
-    }
+    swaybar_command waybar
+  
 }
 
-include /etc/sway/config.d/*
+include $HOME/.config/sway/config.d/*
