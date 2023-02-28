@@ -1,13 +1,7 @@
-<table align="center">
-  <tr>
-    <td align="center">
-      <sup>
-            <samp>
-                  <b>Simple setup Wayland on Debian</b>
-            </samp>
-      </sup>
-    </td>
-  </tr>
+
+<p align="center"> <h1 align="center">Simple setup Sway Wayland on Debian</h1></p>
+                 
+
 
 </table>
 
