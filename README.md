@@ -7,7 +7,7 @@
 
 <br>
 
-<img src="screenshot/screenshot.png" width=350 align="center">
+<img src="screenshot/screenshot.png" width=1020 align="center">
 
 <br>
 
