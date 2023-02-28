@@ -18,7 +18,7 @@
 | music player      | [cmus](https://cmus.github.io/)         |
 | shell             | [fish](https://fishshell.com/)                            |
 | launcher          | [wofi](https://hg.sr.ht/~scoopta/wofi)
-| bar               | [swaybar](https://swaywm.org/)                   |
+| bar               | [waybar](https://github.com/Alexays/Waybar)                   |
 | file manager              | [thunar](https://docs.xfce.org/xfce/thunar/start)                   |
 | login manager              | [sddm](https://github.com/sddm/sddm)                   |
 | logout manager              | [wlogout](https://github.com/ArtsyMacaw/wlogout)                   |
