@@ -22,7 +22,7 @@
 | file manager              | [thunar](https://docs.xfce.org/xfce/thunar/start)                   |
 | login manager              | [sddm](https://github.com/sddm/sddm)                   |
 | logout manager              | [wlogout](https://github.com/ArtsyMacaw/wlogout)                   |
-| compositor        | [autotiling](https://github.com/nwg-piotr/autotiling)                                  | 
+| tiling manager       | [autotiling](https://github.com/nwg-piotr/autotiling)                                  | 
 | screenshot        | [grimshot](https://manpages.debian.org/unstable/grimshot/grimshot.1.en.html)                                  | 
 | font              | [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)                                  |
 
