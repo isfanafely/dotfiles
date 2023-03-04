@@ -1,7 +1,7 @@
 {
   "position": "top",
 	"height": 10,
-  "modules-left": ["custom/void","sway/workspaces","custom/separator","custom/music"],
+  "modules-left": ["sway/workspaces","custom/separator","custom/music"],
 	"modules-center": ["custom/clock","custom/weather"],
   "modules-right": ["network","custom/separator","memory", "custom/separator","cpu","temperature","custom/separator","custom/crypto","custom/separator","custom/power"],
   "sway/workspaces": {
@@ -36,10 +36,6 @@
     },
     "format": "CPU: {usage}% ",
     "format-alt": "{avg_frequency}GHz"
-  },
-  "custom/void": {
-	  "format": "\udb82\udcda",
-	  "on-click": "wofi -I --show drun"
   },
   "custom/separator": {
 	  "format": " "

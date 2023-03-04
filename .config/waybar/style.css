@@ -26,11 +26,19 @@ window#waybar {
 
 #workspaces button:hover {
   background: #5eff00;
+  border-radius: 0%;
 }
 
 #workspaces button.focused {
   color: #ffffff;
   background-color: #007fff;
+  border-radius: 0%;
+}
+
+#workspaces button.urgent {
+  background-color: #ff5c5c;
+  padding: 0 5px;
+  color: #ffffff;
   border-radius: 0%;
 }
 
@@ -46,15 +54,6 @@ window#waybar {
 #clock {
     color: #ffffff;
     margin-bottom: 0px;
-}
-
-#custom-void {
-    color: #000000;
-    background-color: #ffffff;
-    padding: 0 10px;
-    margin: 0 0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
 }
 
 #custom-separator {
@@ -129,7 +128,7 @@ window#waybar {
 #custom-music {
   animation-name: blink;
   animation-duration: 10s;
-  animation-timing-function: linear;
+  animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
   animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation-direction:alternate;
 }
