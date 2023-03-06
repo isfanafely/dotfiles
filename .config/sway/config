@@ -3,7 +3,7 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
-font pango:JetBrainsMono Nerd Font 10.5
+font pango:JetBrainsMono Nerd Font 11
 
 focus_follows_mouse yes
 
@@ -22,28 +22,28 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi -I --show drun
-#set $menu dmenu_path | dmenu_run
+set $menu wofi --show drun
+#set $menu dmenu
 
 #autotiling
 exec autotiling
 
 ## Window decoration
-# class                 border  backgr. text    indicator child_border
-client.focused          #333333 #000000 #ffffff #eaeaea   #333333
-client.focused_inactive #333333 #1d1d1d #ffffff #eaeaea   #333333
-client.unfocused        #333333 #333333 #ffffff #eaeaea   #333333
-client.urgent           #ffffff #e01b24 #1d202f #eaeaea   #ffffff
+# class                  border      backgr.  text    indicator child_border
+client.focused           #00000000   #00000000 #FFFFFF #00000000  #00000000
+client.focused_inactive  #00000000  #00000000 #00000000 #00000000   #00000000
+client.unfocused         #00000000  #00000000 #00000000 #00000000   #00000000
+client.urgent            #00000000    #A7171A  #ffffff #00000000   #00000000 
 
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/wallpapers/nebula.png fill
+#output * bg $HOME/Downloads/Wallpapers/1301526.png fill
 #
 # Example configuration:
 #
-   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -51,10 +51,10 @@ output * bg /usr/share/wallpapers/nebula.png fill
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 600 'swaylock -f -c 000000' \
+         timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
