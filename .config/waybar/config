@@ -1,76 +1,75 @@
 {
   "position": "top",
-	"height": 10,
-  "modules-left": ["sway/workspaces","custom/separator","custom/music"],
-	"modules-center": ["custom/clock","custom/weather"],
-  "modules-right": ["network","custom/separator","memory", "custom/separator","cpu","temperature","custom/separator","custom/crypto","custom/separator","custom/power"],
+	"height": 20,
+  "modules-left": ["sway/workspaces","custom/music"],
+	"modules-center": ["custom/clock","clock","custom/weather"],
+  "modules-right": ["network","memory","cpu","temperature","custom/crypto","custom/power"],
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
-	  "format": "{name}",
-	  "persistent_workspaces": {
-	   "1": [],
-	   "2": [],
-	   "3": [],
-	   "4": [],
-	   "5": [],
-	   "6": [],
-	   "7": [],
-	   "8": [],
-	   "9": [],
-	   "10": []
+	  "format": "{icon}",
+	  "format-icons": {
+	   "1": "󰎤",
+	   "2": "󰎧",
+	   "3": "󰎪",
+	   "4": "󰎭",
+	   "5": "󰎱",
+     "6": "󰎳",
+	   "7": "󰎶",
+	   "8": "󰎹",
+	   "9": "󰎼",
+	   "10": "󰎡"
 	  }
   },
-  "custom/power": {
-    "format": "󰐥",
-    "on-click": "wlogout -p layer-shell"
-    },
-  "custom/clock": {
-    "exec": "echo '  '$(date +'%a %b %d %I:%M:%S %p')'  '",
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%I:%M %p} ",
     "interval": 1
   },
-  "cpu": {
-    "states": {
-      "warning": 70,
-      "critical": 90
-    },
-    "format": "CPU: {usage}% ",
-    "format-alt": "{avg_frequency}GHz"
+  "custom/clock": {
+    "format": "{}",
+    "exec": "$HOME/.config/waybar/modules/clock.sh",
+    "interval": 1
   },
-  "custom/separator": {
-	  "format": " "
+  "network": {
+    "interval": 1,
+    "interface": "enp5s0",
+    "format-wifi": " <span foreground='#a6e3a1'>\uf103</span> {bandwidthDownBits} <span foreground='#f38ba8'>\uf102</span> {bandwidthUpBits} ",
+    "format-ethernet": " <span foreground='#a6e3a1'>\uf103</span> {bandwidthDownBits} <span foreground='#f38ba8'>\uf102</span> {bandwidthUpBits} ",
+    "format-disconnected": " <span foreground='#f38ba8'>\uead0</span> ",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
   },
   "memory": {
     "states": {
       "warning": 70,
       "critical": 90
     },
-    "format": " RAM: {}%",
+    "format": " <span foreground='#f9e2af'>\ue706</span> {}% ",
     "tooltip-format": "{used:0.1f}G/{total:0.1f}G used"
   },
+  "cpu": {
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+    "format": " <span foreground='#89dceb'>\uf85a</span> {usage}%",
+    "format-alt": "{avg_frequency}GHz"
+  },
 	"temperature": {
-    "thermal-zone": 1,
+    "thermal-zone": 2,
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
     "format-critical": "{temperatureC}°C",
-    "format": "{temperatureC}°C"
-  },
-  "network": {
-    "interval": 1,
-    "interface": "enp5s0",
-    "format-wifi": "⬇ {bandwidthDownBits} ⬆ {bandwidthUpBits}",
-    "format-ethernet": "<span foreground='#00FF00'>⬇</span> {bandwidthDownBits}  <span foreground='#FF0000'>⬆</span> {bandwidthUpBits}",
-    "format-disconnected": " <span foreground='#928374'>\uead0</span> ",
-    "tooltip-format": "{ifname}: {ipaddr}/{cidr} "
+    "format": " {temperatureC}°C "
   },
   "custom/crypto": {
-    "format": "<span foreground='#FFA500'>₿</span> {}",
+    "format": " <span foreground='#fab387'>₿</span>{} ",
     "interval": 300,
     "exec": "$HOME/.config/waybar/modules/crypto.sh",
     "exec-if": "ping www.coindesk.com -c1"
   },
   "custom/music": {
-    "format": "♪ {}",
+    "format": " {} ",
     "interval": 1,
     "exec": "$HOME/.config/waybar/modules/music.sh",
     "exec-if": "pgrep cmus",
@@ -81,5 +80,9 @@
     "interval": 60,
     "exec": "$HOME/.config/waybar/modules/weather.sh",
     "exec-if": "ping openweathermap.org -c1"                            
+  },
+  "custom/power": {
+    "format": "⏼",
+    "on-click": "wlogout -p layer-shell"
   }
 }

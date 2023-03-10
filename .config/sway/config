@@ -5,7 +5,9 @@
 # Read `man 5 sway` for a complete reference.
 font pango:JetBrainsMono Nerd Font 11
 
-focus_follows_mouse yes
+seat seat0 xcursor_theme Catppuccin-Mocha-Light-Cursors
+
+focus_follows_mouse no
 
 ### Variables
 #
@@ -22,11 +24,9 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show drun
-#set $menu dmenu
+#set $menu wofi -I --show drun
+set $menu bemenu-run -i -H 25 --fb "#1e1e2e" --ff "#94e2d5" --nb "#1e1e2e" --nf "#f5e0dc" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#cba6f7" --hf "#89b4fa" --nf "#f5e0dc" --af "#f5e0dc" --ab "#1e1e2e"
 
-#autotiling
-exec autotiling
 
 ## Window decoration
 # class                  border      backgr.  text    indicator child_border
@@ -39,11 +39,11 @@ client.urgent            #00000000    #A7171A  #ffffff #00000000   #00000000
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg $HOME/Downloads/Wallpapers/1301526.png fill
+# output * bg $HOME/Downloads/Wallpapers/flatppuccin_4k_macchiato.png fill
 #
 # Example configuration:
 #
-#output HDMI-A-1 resolution 1920x1080 position 1920,0
+output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -81,9 +81,6 @@ exec swayidle -w \
     # Start a terminal
     bindsym $mod+Return exec $term
 
-    #logout
-    bindsym Ctrl+Alt+q exec wlogout -p layer-shell
-    
     # Kill focused window
     bindsym $mod+q kill
 
@@ -101,7 +98,7 @@ exec swayidle -w \
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -214,6 +211,7 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
 #Audio
 
 bindsym Ctrl+Alt+m 	exec $term -e cmus 
@@ -245,5 +243,45 @@ bar {
     swaybar_command waybar
   
 }
+
+#autotiling
+exec_always "pkill -f 'python3? .+/swaymonad.py';  ~/.config/sway/swaymonad/swaymonad.py"
+
+# bindsym $mod+Shift+Return nop promote_window
+
+bindsym $mod+Tab nop focus_next_window
+bindsym $mod+Shift+Tab nop focus_prev_window
+
+# bindsym $mod+Shift+a nop move left
+# bindsym $mod+Shift+s nop move down
+# bindsym $mod+Shift+w nop move up
+# bindsym $mod+Shift+d nop move right
+
+# bindsym $mod+Shift+x nop swap_with_next_window
+# bindsym $mod+Shift+z nop swap_with_prev_window
+
+# bindsym $mod+x nop reflectx
+# bindsym $mod+y nop reflecty
+# bindsym $mod+t nop transpose
+
+# bindsym $mod+Shift+f nop fullscreen
+
+# bindsym $mod+Comma nop increment_masters
+# bindsym $mod+Period nop decrement_masters
+
+# mode "layout" {
+#   bindsym t nop set_layout tall
+#   bindsym 3 nop set_layout 3_col
+#   bindsym n nop set_layout nop
+
+#   # Return to default mode
+#   bindsym Return mode "default"
+#   bindsym Escape mode "default"
+# }
+# bindsym $mod+Alt+l mode "layout"
+
+# mouse_warping container
+# focus_wrapping no
+
 
 include $HOME/.config/sway/config.d/*

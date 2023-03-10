@@ -1,21 +1,22 @@
 * {
 	background-image: none;
 }
+@import "mocha.css";
 window {
 	background-color: rgba(0, 0, 0, 0.33);
 }
 button {
-    color: #FFFFFF;
-	background-color: #1E1E1E;
+    color: @text;
+	background-color: @base;
 	border-style: solid;
 	border-width: 2px;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 25%;
+	background-size: 15%;
 }
 
 button:focus, button:active, button:hover {
-	background-color: #007fff;
+	background-color: royalblue;
 	outline-style: none;
 }
 

@@ -1,12 +1,9 @@
-/* GENERAL */
-* {
-    min-height: 0;
-    font-size: 15px;
-    font-weight: bold;
-  }
+@import "mocha.css";
 window#waybar {
-    background-color: #333333;
+    background-color: rgba(0,0,0,0);
     font-family: JetBrainsMono Nerd Font;
+    font-size: 16px;
+    font-weight: bolder;
     padding: 0;
     margin: 0;
 }
@@ -16,119 +13,112 @@ window#waybar {
   margin-top: 0px;
   padding: 0px;
   padding-left: 0px;
-  background-color: #333333;
+  background-color: @base;
+  border-radius: 5;
 }
 
 #workspaces button {
-  color: #ffffff;
-  padding: 0px 5px;
+  color: @text;
+  padding: 0px 0px;
 }
 
 #workspaces button:hover {
-  background: #5eff00;
+  color: @green;
   border-radius: 0%;
 }
 
 #workspaces button.focused {
-  color: #ffffff;
-  background-color: #007fff;
+  color: @blue;
   border-radius: 0%;
 }
 
 #workspaces button.urgent {
-  background-color: #ff5c5c;
   padding: 0 5px;
-  color: #ffffff;
+  color: @red;
   border-radius: 0%;
 }
 
-#custom-power {
-  color: #000000;
-  background-color: #ff5c5c;
-  padding: 0 10px;
-  margin: 0 0px;
-  margin-bottom: 0px;
-  margin-top: 0px;
+tooltip {
+  color: @text;
+  background-color: @base;
 }
-
-#clock {
-    color: #ffffff;
-    margin-bottom: 0px;
-}
-
-#custom-separator {
-  color: #333333;
-  padding: 0 0px;
-  margin: 0 0px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-}
-
-#memory {
-    color: #ffffff;
-}
-
-#cpu {
-    border-radius: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 0px;
-    background-color: #333333;
-    color: #ffffff;
-}
-
-#custom-crypto {
-  border-radius: 10px;
-  margin-right: 5px;
-  margin-left: 5px;
-  padding: 0px;
-  background-color: #333333;
-  color: #ffffff;
-}
-
 @keyframes blink{
   to{
-    color: #ff0000;
+    color: @red;
   }
   8%{
-    color: #ff7f00;
+    color: @peach;
   }
   16%{
-    color: #ffff00;
+    color: @yellow;
   }
   25%{
-    color: #7fff00;
+    color: @green;
   }
   33%{
-    color: #00ff00;
+    color: @teal;
   }
   41%{
-    color: #00ff7f;
+    color: @sky;
   }
   50%{
-    color: #00ffff;
+    color: @blue;
   }
   58%{
-    color: #007fff;
+    color: @sapphire;
   }
   66%{
-    color: #0000ff;
+    color: @lavender;
   }
   75%{
-    color: #7f00ff;
+    color: @mauve;
   }
   83%{
-    color: #ff00ff;
+    color: @flamingo;
   }
   91%{
-    color: #ff007f;
+    color: @pink;
   }
 }
 
 #custom-music {
   animation-name: blink;
   animation-duration: 10s;
-  animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-timing-function:linear;
   animation-iteration-count: infinite;
-  animation-direction:alternate;
+  animation-direction:normal;
 }
+
+#clock {
+    color: @text;
+}
+#custom-clock {
+  color: @text;
+}
+
+#memory {
+  color: @text;
+}
+#custom-weather {
+  color: @text;
+}
+#network {
+  color: @text;
+}
+
+#cpu {
+    color: @text;
+}
+#temperature {
+  color: @text;
+}
+#custom-crypto {
+  color: @text;
+}
+
+#custom-power {
+  color: @red;
+  padding: 0 10px;
+  margin-right: 5px;
+}
+
