@@ -20,9 +20,9 @@
 | launcher          | [wofi](https://hg.sr.ht/~scoopta/wofi)
 | bar               | [waybar](https://github.com/Alexays/Waybar)                   |
 | file manager              | [thunar](https://docs.xfce.org/xfce/thunar/start)                   |
-| login manager              | [sddm](https://github.com/sddm/sddm)                   |
+| login manager              | [emptty](https://github.com/tvrzna/emptty)                 |
 | logout manager              | [wlogout](https://github.com/ArtsyMacaw/wlogout)                   |
-| tiling manager       | [swaymonad]([https://github.com/nwg-piotr/autotiling](https://github.com/nicolasavru/swaymonad))                                  | 
+| tiling manager       | [swaymonad](https://github.com/nicolasavru/swaymonad)                                 | 
 | screenshot        | [grimshot](https://manpages.debian.org/unstable/grimshot/grimshot.1.en.html)                                  | 
 | font              | [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)                                  |
 
