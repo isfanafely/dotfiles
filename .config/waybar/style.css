@@ -87,38 +87,54 @@ tooltip {
   animation-timing-function:linear;
   animation-iteration-count: infinite;
   animation-direction:normal;
+  background-color: @base;
 }
 
 #clock {
     color: @text;
+    background-color: @base;
 }
 #custom-clock {
   color: @text;
+  background-color: @base;
 }
 
 #memory {
   color: @text;
+  background-color: @base;
+  border-radius: 0%;
 }
 #custom-weather {
   color: @text;
+  background-color: @base;
 }
 #network {
   color: @text;
+  background-color: @base;
+  border-radius: 0%;
 }
 
 #cpu {
     color: @text;
+    background-color: @base;
+    border-radius: 0%;
 }
 #temperature {
   color: @text;
+  background-color: @base;
+  border-radius: 0%;
 }
 #custom-crypto {
   color: @text;
+  background-color: @base;
+  border-radius: 0%;
 }
 
 #custom-power {
   color: @red;
+  background-color: @base;
   padding: 0 10px;
-  margin-right: 5px;
+  margin-right: 0px;
+  border-radius: 0%;
 }
 
