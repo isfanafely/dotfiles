@@ -1,5 +1,5 @@
 
-<p align="center"> <h1 align="center">Simple setup Sway Wayland on Debian</h1></p>
+<p align="center"> <h1 align="center">Simple setup Sway Wayland</h1></p>
                  
 
 
