@@ -14,7 +14,7 @@
 | task              | name                   |
 | ----------------- | ---------------------- |
 | wm                | [sway](https://swaywm.org/)                                      |
-| terminal          | [kitty](https://sw.kovidgoyal.net/kitty/)                                      |
+| terminal          | [alacritty](https://github.com/alacritty/alacritty)                                      |
 | music player      | [cmus](https://cmus.github.io/)         |
 | shell             | [fish](https://fishshell.com/)                            |
 | launcher          | [wofi](https://hg.sr.ht/~scoopta/wofi)
@@ -24,7 +24,7 @@
 | logout manager              | [wlogout](https://github.com/ArtsyMacaw/wlogout)                   |
 | tiling manager       | [swaymonad](https://github.com/nicolasavru/swaymonad)                                 | 
 | screenshot        | [grimshot](https://manpages.debian.org/unstable/grimshot/grimshot.1.en.html)                                  | 
-| font              | [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)                                  |
+| font              | [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)                                   |
 
 <br>
 
