@@ -129,7 +129,11 @@ tooltip {
   background-color: @base;
   border-radius: 0%;
 }
-
+#custom-mixer {
+    color: @text;
+    background-color: @base;
+    border-radius: 0%;
+}
 #custom-power {
   color: @red;
   background-color: @base;

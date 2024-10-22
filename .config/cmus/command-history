@@ -1,0 +1,4 @@
+add Music
+add ~/Music
+clear
+add -p /home/isfanafely/Music/

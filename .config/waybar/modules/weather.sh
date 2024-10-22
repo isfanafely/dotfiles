@@ -26,9 +26,9 @@ get_icon() {
     echo $icon
 }
 ## Weather data
-KEY="api"
-LAT="latitude"
-LON="longitude"
+KEY="662d0878e4211d2bed06315d63416aa0"
+LAT="-6.677363"
+LON="110.917645"
 UNIT="metric"	# Available options : 'metric' or 'imperial'
 SYMBOL="°C"
 

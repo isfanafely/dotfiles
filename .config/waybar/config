@@ -3,7 +3,7 @@
 	"height": 20,
   "modules-left": ["sway/workspaces","custom/music"],
 	"modules-center": ["custom/clock","clock","custom/weather"],
-  "modules-right": ["network","memory","cpu","temperature","custom/crypto","custom/power"],
+  "modules-right": ["network","memory","cpu","temperature","custom/crypto","custom/mixer","custom/power"],
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -22,7 +22,7 @@
 	  }
   },
   "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<small>{:%A, %d %b %Y}</small>",
     "format": "{:%I:%M%p} ",
     "interval": 1
   },
@@ -34,7 +34,7 @@
   },
   "network": {
     "interval": 1,
-    "interface": "wlp1s0f0u4",
+    "interface": "enx00e04c9c3755",
     "format-wifi": " <span foreground='#a6e3a1'>\uf103</span> {bandwidthDownBits} <span foreground='#f38ba8'>\uf102</span> {bandwidthUpBits} ",
     "format-ethernet": " <span foreground='#a6e3a1'>\uf103</span> {bandwidthDownBits} <span foreground='#f38ba8'>\uf102</span> {bandwidthUpBits} ",
     "format-disconnected": " <span foreground='#f38ba8'>\uead0</span> ",
@@ -90,5 +90,10 @@
     "format": "󰗼",
     "tooltip": false,
     "on-click": "wlogout -p layer-shell"
-  }
+  },
+  "custom/mixer": {
+   "format" : "",
+   "tooltip" : false,
+   "on-click" : "$HOME/.config/waybar/modules/sound_sink_switcher.sh"
+   },
 }

@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 font pango:JetBrainsMono Nerd Font 11
 
-seat seat0 xcursor_theme Catppuccin-Mocha-Light-Cursors
+seat seat0 xcursor_theme Adwaita
 
 focus_follows_mouse no
 
@@ -19,7 +19,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term alacritty
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -39,7 +39,7 @@ client.urgent            #00000000    #A7171A  #ffffff #00000000   #00000000
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg $HOME/Downloads/Wallpapers/flatppuccin_4k_macchiato.png fill
+output * bg $HOME/Downloads/Wallpapers/flatppuccin_4k_macchiato.png fill
 #
 # Example configuration:
 #
@@ -176,7 +176,7 @@ exec swayidle -w \
     # Move focus to the parent container
     bindsym $mod+a focus parent
 #
-# Scratchpad:
+## Scratchpad:
 #
     # Sway has a "scratchpad", which is a bag of holding for windows.
     # You can send windows there and get them back later.
@@ -284,4 +284,4 @@ bindsym $mod+Shift+Tab nop focus_prev_window
 # focus_wrapping no
 
 
-include $HOME/.config/sway/config.d/*
+#include $HOME/.config/sway/config.d/*
