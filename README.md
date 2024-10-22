@@ -24,7 +24,7 @@
 | logout manager              | [wlogout](https://github.com/ArtsyMacaw/wlogout)                   |
 | tiling manager       | [swaymonad](https://github.com/nicolasavru/swaymonad)                                 | 
 | screenshot        | [grimshot](https://manpages.debian.org/unstable/grimshot/grimshot.1.en.html)                                  | 
-| font              | [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)                                   |
+| font              | [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads), [Awesome Font](https://fontawesome.com/)                                       |
 
 <br>
 
